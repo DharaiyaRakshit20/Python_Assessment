@@ -1,5 +1,8 @@
 from manger import *    # import manger (*) mines  oll function import
 from customer import *   # import customer (*) mines  oll function import 
+
+
+
 while True:
     print("Wellcome To Fruit Market")
     item='''\n      
@@ -44,5 +47,30 @@ while True:
         customer_reole()  # function call
         
     elif s_role == 3:  #user select 3 role to Got back to program
-        print("ThankYou for visit")
+        print(store)
+        total_amount=0
+        file=open("FMC.txt","a")
+        print(file.write("\n\nFruit Market Customer\n"))
+        name=input("Enter Customer Name : ")
+        print(file.write(f"Name : {name}\n"))
+        Bill_num=int(input("Enter Bill Number : "))
+        print(file.write(f"Bill No. : {Bill_num}\n"))
+        print(file.write("------------------------------------\n"))
+        print(file.write("------------------------------------\n"))
+        print(file.write("item\t\tQty\t\tprice\n"))
+        print(file.write("------------------------------------\n"))
+        for i in store:
+            qty=store[i]["quantity"]
+            pr=store[i]["Price"]
+            print(file.write(f"{i}\t\t{qty}\t\t{pr}\n"))
+            total_amount+=pr
+        print(file.write("------------------------------------\n"))
+        print(file.write(f"Total Amount\t\t\t{total_amount}\n"))
+        print(file.write("------------------------------------\n"))
         break
+        
+
+        
+        
+        
+            
