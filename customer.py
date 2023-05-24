@@ -13,8 +13,8 @@ def customer_reole():  # function defination
         else:
             print("Fruit not exiesting your stock")
         yn=input("Press Y for yes and N for no : ")
-        if yn == 'y':
+        if yn == 'y': #user 'y' for yes to continue to program
             continue
-        elif yn == 'n':
+        elif yn == 'n': #user 'n' for no to brack to program
             break
                      

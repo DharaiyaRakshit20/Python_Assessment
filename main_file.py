@@ -48,9 +48,9 @@ while True:
         
     elif s_role == 3:  #user select 3 role to Got back to program
         print(store)
-        total_amount=0
-        file=open("FMC.txt","a")
-        print(file.write("\n\nFruit Market Customer\n"))
+        total_amount=0  #empty total_amount
+        file=open("FMC.txt","a")  #file open with append mood
+        print(file.write("\n\nFruit Market Customer\n")) 
         name=input("Enter Customer Name : ")
         print(file.write(f"Name : {name}\n"))
         Bill_num=int(input("Enter Bill Number : "))
@@ -59,11 +59,11 @@ while True:
         print(file.write("------------------------------------\n"))
         print(file.write("item\t\tQty\t\tprice\n"))
         print(file.write("------------------------------------\n"))
-        for i in store:
-            qty=store[i]["quantity"]
-            pr=store[i]["Price"]
-            print(file.write(f"{i}\t\t{qty}\t\t{pr}\n"))
-            total_amount+=pr
+        for i in store:  #for loop in store
+            qty=store[i]["quantity"]  #qty varibale under to sotre of i and Quantity
+            pr=store[i]["Price"]  #pr varibale under to store of i and price
+            print(file.write(f"{i}\t\t{qty}\t\t{pr}\n"))  #print to i ,qty and pr variable
+            total_amount+=pr  #total_amount pluse qeul to pr
         print(file.write("------------------------------------\n"))
         print(file.write(f"Total Amount\t\t\t{total_amount}\n"))
         print(file.write("------------------------------------\n"))
